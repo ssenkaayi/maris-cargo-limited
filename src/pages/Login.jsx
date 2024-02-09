@@ -2,63 +2,66 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
+import { useDispatch,useSelector} from 'react-redux';
+import { signInStart,signInSuccess,signInFailure } from '../redux/employe/employeSlice';
+
 export default function Login() {
 
   const[employData,setEmployData] = useState({})
+  const {loading,error} = useSelector((state)=>state.employe);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleEmployeData = (e)=>{
 
-    setEmployData(
+  setEmployData(
 
-      {...employData,
-        [e.target.id]:e.target.value,})
-    }
+    {...employData,
+      [e.target.id]:e.target.value,})
+  }
 
-    //linking our api to send req to the server
-    const handleSubmit = async(e)=>{
-    
-      e.preventDefault();
-
-      try{
-        // dispatch(signInStart())
-        //making a request to the server
-        const res = await fetch('/api/users/loginUser',{
-
-          method:'POSt',
-          headers:{'content-type':'application/json',},
-          body:JSON.stringify(employData)
-
-        }
-        );
-        //getting response from the server
-        const data =  await res.json();
-        navigate('/home')
-        // console.log(data)
-        
+  //linking our api to send req to the server
+  const handleSubmit = async(e)=>{
   
-        //if response is false, show the error message to the client
-        // if(data.success===false){
-        //   dispatch(signInFailure(data.message));
-        //   return;
-        // }
-  
-        //if response is True, register and navigate to the sign in page
-       
-       
-       
-        // dispatch(signInSuccess(data));
-        // navigate('/')
-  
-      }catch(error){
-        // dispatch(signInFailure(error.message))
-        console.log(error.message)
-      } 
-    }
+    e.preventDefault();
 
-  // handleEmployeData()
+    try{
+      dispatch(signInStart())
+      //making a request to the server
+      const res = await fetch('/api/users/loginUser',{
 
-  // console.log(employData)
+        method:'POSt',
+        headers:{'content-type':'application/json',},
+        body:JSON.stringify(employData)
+
+      }
+      );
+      //getting response from the server
+      const data =  await res.json();
+     
+      
+
+      // if response is false, show the error message to the client
+
+      if(data.success===false){
+        dispatch(signInFailure(data.message));
+        return;
+      }
+
+      //if response is True, register and navigate to the sign in page
+      
+      
+      
+      dispatch(signInSuccess(data));
+      navigate('/home')
+
+    }catch(error){
+      dispatch(signInFailure(error.message))
+      
+    } 
+  }
+
+
 
   return (
     
