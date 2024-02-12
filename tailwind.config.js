@@ -9,7 +9,11 @@ export default {
       colors:{
         'regal-violet': 'rgb(113, 99, 186, 255)',
         'menu':'#e0e0e058',
-        'menu-color':'#fff'
+        'menu-color':'#fff',
+        'base':'#ebe9e9',
+        "dashbord":"rgba(113,99,186,255)",
+        "search-bar":"rgba(237, 237,237)"
+
         
       },
       width:{

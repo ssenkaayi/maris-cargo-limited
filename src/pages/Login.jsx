@@ -74,7 +74,7 @@ export default function Login() {
         <form className='flex flex-col gap-4' >
 
           < img className='rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2 my-7' 
-            src="https://pixabay.com/vectors/blank-profile-picture-mystery-man-973460/" 
+            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" 
             alt="Avatar"
           />
 
