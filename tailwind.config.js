@@ -24,7 +24,8 @@ export default {
       },
       padding:{
         'sidebar-padding':'0 1.7rem',
-        'logo':'16px'
+        'logo':'16px',
+        'header':'10px 2rem'
       },
       transitionProperty:{
         'sidebar':'transition-all 0.5s linear',
