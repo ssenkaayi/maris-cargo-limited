@@ -1,8 +1,8 @@
 {
   "name": "frontend",
-  "homepage": "http://ssenkaayi.github.io/maris-cargo-limited",
   "private": true,
   "version": "0.0.0",
+  "homepage": "http://ssenkaayi.github.io/maris-cargo-limited",
   "type": "module",
   "scripts": {
     "dev": "vite",
