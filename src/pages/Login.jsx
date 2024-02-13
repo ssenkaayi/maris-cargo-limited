@@ -64,50 +64,48 @@ export default function Login() {
 
 
   return (
+
+    <div className='bg-base items-center'>
+
     
- 
+      <form className='font-primay p-3 flex max-w-lg mx-auto  bg-white text-regal-violet flex-col gap-4' >
 
-      <div className='p-3 max-w-lg mx-auto my-7 mt-30'>
+        < img className='rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2 my-7' 
+          src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" 
+          alt="Avatar"
+        />
 
-        
-
-        <form className='flex flex-col gap-4' >
-
-          < img className='rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2 my-7' 
-            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" 
-            alt="Avatar"
-          />
-
-          <h1 className='text-3xl text-center font-semibold my-7'>Login</h1>
+        <h1 className='text-3xl text-center font-semibold my-7'>Login</h1>
 
 
-          <div className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-4'>
 
-            <label className='text-1xl font-semibold'>Email</label>
-            <input type="email" placeholder="Enter email" id='email' className='border p-3 rounded-lg'
-             required onChange={handleEmployeData}
-             />
+          <label className='text-1xl font-semibold'>Email</label>
+          <input type="email" placeholder="Enter email" id='email' className='border p-3 rounded-lg'
+            required onChange={handleEmployeData}
+            />
 
-            <label className='text-1xl font-semibold'>Password</label>
-            <input type="password" placeholder="Enter Password" id='password' 
-            className='border p-3 rounded-lg' required 
-            onChange={handleEmployeData}/>
+          <label className='text-1xl font-semibold'>Password</label>
+          <input type="password" placeholder="Enter Password" id='password' 
+          className='border p-3 rounded-lg' required 
+          onChange={handleEmployeData}/>
 
-            <button className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95'
-             onClick={handleSubmit} type="submit" disabled={loading} > {loading? 'loading...':'Login'}</button>
+          <button className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95'
+            onClick={handleSubmit} type="submit" disabled={loading} > {loading? 'loading...':'Login'}
+          </button>
 
 
-          </div>
+        </div>
 
-          <div className='flex gap-2 mt-5'>
-            
-          </div>
-
-        </form>
+        <div className='flex gap-2 mt-5'>
+          
+        </div>
 
         {error && <p className='text-red-500 mt-5'>{error}</p>}
 
-      </div>
+      </form>
+
+    </div>
 
     
   )

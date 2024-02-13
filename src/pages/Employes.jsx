@@ -1,8 +1,10 @@
 import React from 'react'
 
+
 function Employes() {
   return (
-    <div>Employes</div>
+
+    <div>Employe</div>
   )
 }
 

@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 
 
 function Base() {
+
   return (
     
     <div className='relative bg-base w-full p-4'>
@@ -15,6 +16,7 @@ function Base() {
     </div>
 
   )
+  
 }
 
 export default Base

@@ -1,9 +1,11 @@
 import React from 'react'
+import Body from '../components/Body'
 
 function Payments() {
   return (
-    <div>Payments</div>
-  )
+
+    <Body/>
+    )
 }
 
 export default Payments

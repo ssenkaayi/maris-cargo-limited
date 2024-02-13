@@ -59,7 +59,7 @@ function Sidebar() {
 
                 <Link 
                 className=' flex items-center
-                text-sm gap-1.5' > Logout  </Link>
+                text-sm gap-1.5' > <i className="fa-solid fa-right-to-bracket"/> Logout  </Link>
 
             </li>
 
