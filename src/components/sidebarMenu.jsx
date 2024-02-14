@@ -3,41 +3,41 @@ export const sidebarMenu = [
     {
 
         title:'Employes',
-        url:'/home/employes',
+        url:'/dashbord/employes',
         icon:'fa-solid fa-circle-info'
 
     },
     {
 
         title:'Orders',
-        url:'/home/orders',
+        url:'/dashbord/orders',
         icon:'fa-solid fa-circle-info'
 
     },
     {
 
         title:'Luggages',
-        url:'/home/luggages',
+        url:'/dashbord/luggages',
         icon:'fa-solid fa-briefcase'
 
     },    {
 
         title:'Payments',
-        url:'/home/payments',
+        url:'/dashbord/payments',
         icon:'fa-solid fa-address-book'
 
     },
     {
 
         title:'Profile',
-        url:'/home/profile',
+        url:'/dashbord/profile',
         icon:'fa-solid fa-address-book'
 
     },
     {
 
         title:'Settings',
-        url:'/home/settings',
+        url:'/dashbord/settings',
         icon:'fa-solid fa-address-book'
 
     },

@@ -53,7 +53,7 @@ export default function Login() {
       
       
       dispatch(signInSuccess(data));
-      navigate('/home')
+      navigate('/dashbord')
 
     }catch(error){
       dispatch(signInFailure(error.message))
